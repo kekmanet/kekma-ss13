@@ -312,11 +312,7 @@ var/auxtools_path
 
 
 	s += {"<b>[station_name()]</b>"
-		(
-		<a href=\"http://\">" //Change this to wherever you want the hub to link to
-		Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version
-		</a>
-		)"}
+		(<a href=\"https://discord.gg/7mjTHtpq">Discord</a>)"}
 	var/list/features = list()
 
 	if(ticker)
