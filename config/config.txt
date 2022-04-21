@@ -1,5 +1,5 @@
 ## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
-SERVERNAME KEKMA
+SERVERNAME Kekma gaming * vg code
 
 ## Alert levels
 ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
@@ -10,10 +10,10 @@ ALERT_RED_DOWNTO The self-destruct mechanism has been deactivated, there is stil
 ALERT_DELTA The station's self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
 
 ## Add a # infront of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system.
-ADMIN_LEGACY_SYSTEM
+#ADMIN_LEGACY_SYSTEM
 
 ## Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system.
-BAN_LEGACY_SYSTEM
+#BAN_LEGACY_SYSTEM
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
 JOBS_HAVE_MINIMAL_ACCESS
@@ -35,7 +35,7 @@ JOBS_HAVE_MINIMAL_ACCESS
 #CARGO_FORWARDING_AMOUNT_OVERRIDE 5
 
 ## (SECURITY RISK ON PUBLIC SERVERS) Automatically give localhost clients +HOST access.
-LOCALHOST_AUTOADMIN
+#LOCALHOST_AUTOADMIN
 
 ## log OOC channel
 LOG_OOC
@@ -83,13 +83,13 @@ LOG_RC
 # LOG_RUNTIMES
 
 ## log sql status messages.
-# LOG_SQL
+ LOG_SQL
 
 ## log all sql queries.
-# LOG_SQL_QUERIES
+ LOG_SQL_QUERIES
 
 ## sql switching
-# SQL_ENABLED 1
+#  SQL_ENABLED 1
 
 ## disconnect players who did nothing during 10 minutes
 # KICK_INACTIVE
@@ -100,16 +100,16 @@ LOG_RC
 ## set to 0 to disable that mode
 ## Cult mode is in alpha test, enable at your own risk
 PROBABILITY EXTENDED 0
-PROBABILITY TRAITOR 2
+PROBABILITY TRAITOR 3
 PROBABILITY METEOR 0
-PROBABILITY MALFUNCTION 2
-PROBABILITY BLOB 2
+PROBABILITY MALFUNCTION 1
+PROBABILITY BLOB 1
 PROBABILITY NUCLEAR 0
 PROBABILITY SANDBOX 0
 PROBABILITY WIZARD 0
 PROBABILITY RESTRUCTURING 0
-PROBABILITY REVOLUTION 5
-PROBABILITY CHANGELING 0
+PROBABILITY REVOLUTION 3
+PROBABILITY CHANGELING 1
 PROBABILITY CULT 1
 PROBABILITY MONKEY 0
 PROBABILITY TRAITORCHAN 0
@@ -164,7 +164,7 @@ ALLOW_AI
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Robocopmp3
+HOSTEDBY Obama
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -236,7 +236,7 @@ ASSISTANT_RATIO 2
 #CONTINUOUS_ROUNDS
 
 ## Uncomment to restrict non-admins from using humanoid alien races
-USEALIENWHITELIST
+#USEALIENWHITELIST
 
 ## Comment this to unrestrict the number of alien players allowed in the round. The number represents the number of alien players for every human player.
 #ALIEN_PLAYER_RATIO 0.2
@@ -309,11 +309,11 @@ RENDERS_URL http://ss13.pomf.se/img/map-renders
 
 ## SKIP_MINIMAP_GENERATION
 ## Uncomment to disable generation of minimaps (makes the server start faster!)
-SKIP_MINIMAP_GENERATION
+#SKIP_MINIMAP_GENERATION
 
 ## SKIP_HOLOMINIMAP_GENERATION
 ## Uncomment to disable generation of holominimaps (makes the server start faster!)
-SKIP_HOLOMINIMAP_GENERATION
+#SKIP_HOLOMINIMAP_GENERATION
 
 ## SKIP_VAULT_GENERATION
 ## Uncomment to disable generation of vaults (makes the server start faster!)
