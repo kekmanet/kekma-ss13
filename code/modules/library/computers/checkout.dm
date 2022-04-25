@@ -488,16 +488,25 @@
 	var/obj/item/weapon/book/B = new newbook.path(src.loc)
 
 	if (!newbook.programmatic)
-		var/list/_http = world.Export("http://ss13.moe/index.php/book?id=[newbook.id]")
-		if(!_http || !_http["CONTENT"])
+/*		var/list/_http = world.Export("http://ss13.moe/index.php/book?id=[newbook.id]")
+*		if(!_http || !_http["CONTENT"])
+*			return
+*		var/http = file2text(_http["CONTENT"])
+*		if(!http)
+*			return
+*/
+		var/datum/DBQuery/query = SSdbcore.NewQuery("SELECT content, id FROM library WHERE id=:id", list("id" = newbook.id))
+		if(!query.Execute())
+			message_admins("Error: [query.ErrorMsg()]")
+			log_sql("Error: [query.ErrorMsg()]")
+			qdel(query)
 			return
-		var/http = file2text(_http["CONTENT"])
-		if(!http)
-			return
+		query.NextRow()
+		log_admin("[query.item[1]]")
 		B.name = "Book: [newbook.title]"
 		B.title = newbook.title
 		B.author = newbook.author
-		B.dat = http
+		B.dat = query.item[1]
 		B.icon_state = "book[rand(1,9)]"
 		B.item_state = B.icon_state
 	src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
