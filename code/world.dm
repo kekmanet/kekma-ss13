@@ -312,7 +312,7 @@ var/auxtools_path
 
 
 	s += {"<b>[station_name()]</b>"
-		(<a href=\"https://discord.gg/7mjTHtpq">Discord</a>)"}
+		(<a href=\"https://discord.gg/YUQTjyjH8U">Discord</a>)"}
 	var/list/features = list()
 
 	if(ticker)
