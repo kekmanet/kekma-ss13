@@ -108,23 +108,30 @@ var/list/all_supply_groups = list("Supplies","Clothing","Security","Hospitality"
 /datum/supply_packs/janitor
 	name = "Janitorial supplies"
 	contains = list(/obj/item/weapon/reagent_containers/glass/bucket,
-					/obj/item/weapon/reagent_containers/glass/bucket,
-					/obj/item/weapon/reagent_containers/glass/bucket,
-					/obj/item/weapon/mop,
-					/obj/item/weapon/caution,
-					/obj/item/weapon/caution,
-					/obj/item/weapon/caution,
+					/obj/item/weapon/reagent_containers/glass/bottle/bleach,
+					/obj/item/weapon/soap,
 					/obj/item/weapon/storage/bag/trash,
 					/obj/item/weapon/reagent_containers/spray/cleaner,
 					/obj/item/weapon/reagent_containers/glass/rag,
 					/obj/item/weapon/grenade/chem_grenade/cleaner,
 					/obj/item/weapon/grenade/chem_grenade/cleaner,
 					/obj/item/weapon/grenade/chem_grenade/cleaner,
-					/obj/item/weapon/storage/box/mousetraps,
-					/obj/structure/mopbucket)
-	cost = 10
+					/obj/item/weapon/storage/box/mousetraps)
+	cost = 15
 	containertype = /obj/structure/closet/crate/basic
 	containername = "janitorial supplies crate"
+	group = "Supplies"
+
+/datum/supply_packs/mopbucket
+	name = "Mop and Bucket"
+	contains = list(/obj/item/weapon/mop,
+					/obj/item/weapon/caution,
+					/obj/item/weapon/caution,
+					/obj/item/weapon/caution,
+					/obj/structure/mopbucket)
+	cost = 20
+	containertype = /obj/structure/largecrate
+	containername = "mop and bucket crate"
 	group = "Supplies"
 
 /datum/supply_packs/trashcompactor
@@ -647,32 +654,34 @@ var/list/all_supply_groups = list("Supplies","Clothing","Security","Hospitality"
 /datum/supply_packs/space_suits
 	name = "Space suit"
 	contains = list(/obj/item/clothing/suit/space,
-					/obj/item/clothing/head/helmet/space)
-	cost = 200
+					/obj/item/clothing/head/helmet/space,
+					/obj/item/weapon/tank/oxygen,
+					/obj/item/clothing/mask/breath)
+	cost = 150
 	containertype = /obj/structure/closet/crate/basic
 	containername = "space suit crate"
 	group = "Clothing"
 
 /datum/supply_packs/vox_supply
-	name = "Vox supplies"
+	name = "Vox pressure suit"
 	contains = list(/obj/item/clothing/suit/space/vox/civ,
 					/obj/item/clothing/head/helmet/space/vox/civ,
 					/obj/item/weapon/tank/nitrogen,
 					/obj/item/clothing/mask/breath/vox)
 	cost = 100
 	containertype = /obj/structure/closet/crate/basic
-	containername = "vox supplies crate"
+	containername = "vox suit crate"
 	group = "Clothing"
 
 /datum/supply_packs/plasmaman_supply
-	name = "Plasmaman supplies"
+	name = "Plasmaman suit"
 	contains = list(/obj/item/clothing/suit/space/plasmaman,
 					/obj/item/clothing/head/helmet/space/plasmaman,
 					/obj/item/weapon/tank/plasma/plasmaman,
 					/obj/item/clothing/mask/breath)
 	cost = 100
 	containertype = /obj/structure/closet/crate/basic
-	containername = "plasmaman supplies crate"
+	containername = "plasmaman suit crate"
 	group = "Clothing"
 
 /datum/supply_packs/grey_supply
@@ -1938,6 +1947,8 @@ var/list/all_supply_groups = list("Supplies","Clothing","Security","Hospitality"
 					/obj/item/weapon/reagent_containers/blood/BMinus,
 					/obj/item/weapon/reagent_containers/blood/OPlus,
 					/obj/item/weapon/reagent_containers/blood/OMinus,
+					/obj/item/weapon/reagent_containers/blood/empty,
+					/obj/item/weapon/reagent_containers/blood/empty,
 					/obj/item/weapon/reagent_containers/blood/empty)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/medsec
